@@ -66,7 +66,7 @@ def main():
             if lin[0] != ';' and lin[0] != '\n':
                 negative_words.append(lin.strip())
 
-    with open("..\project_twitter_data.csv", "r") as f:
+    with open("project_twitter_data.csv", "r") as f:
         twitter_data = []
 
         for line in f.readlines():
@@ -87,7 +87,6 @@ def main():
                     numRT = data[1]
                     numRE = data[2]
                     row = [numRT.strip(), numRE.strip(), str(p_words), str(n_words), str(net)]
-                    print(row)
                     fh.write("\n")
                     fh.write(",".join(row))
 
